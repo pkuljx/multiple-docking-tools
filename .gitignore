@@ -1,0 +1,30 @@
+# binaries — download with bin/get_binaries.sh (see README)
+bin/smina
+bin/gnina.bin
+
+# generated docking results / outputs
+**/H1_hbond/
+**/H1_out/
+**/*_out/
+**/TL1A_Duvakitug*/
+**/run/
+**/poses/
+**/ligands/
+**/sdf/
+**/receptor.pdbqt
+**/receptor_fixed.pdb
+**/*.tbl
+**/residue_map.json
+**/run.cfg
+**/mol1.pdb
+**/mol2.pdb
+**/orig1.pdb
+**/orig2.pdb
+
+# reports / scratch
+*.html
+
+# python / os cruft
+**/__pycache__/
+*.pyc
+.DS_Store

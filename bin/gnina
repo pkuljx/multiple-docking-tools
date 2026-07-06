@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Portable wrapper for the GNINA "static" CUDA build, which still needs
+# libcudnn.so.9 + the CUDA 12.8 runtime at load time. When the `dock` conda env
+# is active, point the loader at its lib dir, then exec the real binary.
+if [ -n "${CONDA_PREFIX:-}" ]; then
+  export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}"
+fi
+exec "$(dirname "$(readlink -f "$0")")/gnina.bin" "$@"
